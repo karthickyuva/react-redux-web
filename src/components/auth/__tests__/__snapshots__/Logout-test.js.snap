@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logout should display 1`] = `
+<div>
+  <div
+    className="col-md-4 col-md-offset-4 vertical-center text-center col-sm-8 col-sm-offset-2"
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "24px",
+          }
+        }
+      >
+        Sorry to see you go
+      </p>
+      <p>
+        <a
+          className="btn btn-primary"
+          href="/login"
+          onClick={[Function]}
+        >
+          Login
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

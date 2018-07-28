@@ -1,0 +1,16 @@
+/* Authentication */
+export const AUTH_USER = "AUTH_USER";
+export const UNAUTH_USER = "UNAUTH_USER";
+export const LOGIN_AUTH_ERROR = "LOGIN_AUTH_ERROR";
+export const REGISTRATION_AUTH_ERROR = "REGISTRATION_AUTH_ERROR";
+export const RESET_PASSWORD = "RESET_PASSWORD";
+export const RESET_PASSWORD_ERROR = "RESET_PASSWORD_ERROR";
+
+/* Post */
+/* Brand Loyalty Programs */
+export const REQUEST_POSTS_LIST = "REQUEST_POSTS_LIST";
+export const RECEIVE_POSTS_LIST = "RECEIVE_POSTS_LIST";
+export const REQUEST_MORE_POSTS = "REQUEST_MORE_POSTS";
+export const RECEIVE_MORE_POSTS = "RECEIVE_MORE_POSTS";
+export const CHANGE_POSTS_PAGE = "CHANGE_POSTS_PAGE";
+export const SET_PAGE = 'SET_PAGE';

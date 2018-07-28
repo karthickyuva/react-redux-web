@@ -1,0 +1,37 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    //"extends": "eslint:recommended",
+    "extends": "@thidiff/eslint-config",
+	"parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        },
+        "sourceType": "module"
+	},
+	"rules": {
+		"strict": 0,
+        "no-undef": 0,
+		"react/jsx-uses-react": 1,
+		"react/jsx-uses-vars": "error",
+        "no-console": 0,
+        "no-alert": 1,
+        "no-debugger": 1,
+        "react/sort-prop-types": [1, {
+          "requiredFirst": true
+        }],
+        "react/no-unused-prop-types": 1,
+        "react/void-dom-elements-no-children": 1,
+        "react/no-did-mount-set-state": [1],
+        "react/no-did-update-set-state": [1],
+        "react/no-deprecated": 1,
+        "react/require-render-return": 1,
+        "react/jsx-no-comment-textnodes": 1
+	},
+	"plugins": [
+		"react"
+	]
+}

@@ -1,0 +1,2 @@
+csslint --errors=zero-units,vendor-prefix,selector-newline,known-properties,order-alphabetical,empty-rules,duplicate-properties,shorthand,duplicate-background-images,overqualified-elements,gradients,text-indent
+--warnings=font-sizes,important,unqualified-attributes,regex-selectors,font-faces,fallback-colors
