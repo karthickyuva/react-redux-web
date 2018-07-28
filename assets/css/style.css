@@ -5835,7 +5835,9 @@ footer .attribution {
 .article-preview .preview-link h1 {
     font-weight: 600 !important;
     font-size: 1.5rem !important;
-    margin-bottom: 3px; }
+    margin-bottom: 3px;
+    color: #333 !important;
+}
 .article-preview .preview-link p {
     font-weight: 300;
     font-size: 24px;
