@@ -23,7 +23,6 @@ class Dashboard extends React.Component {
 
 	componentWillMount() {
 		const { actions, articles } = this.props;
-		console.log(articles);
 
 		let doesExist = false;
 		// if (_.keys(_.pick( && articles.isFetching !== true))) {
@@ -31,18 +30,16 @@ class Dashboard extends React.Component {
 		// }
 
 		if (!doesExist) {
-			console.log("log 1");
 			actions.fetchPostList();
 		}
 	}
 
 	render() {
-		const { articles, pager, articlesCount, currentPage } = this.props;
+		const { articles, pager } = this.props;
 
 		if (articles.isFetching) {
 			return <div>Loading...</div>;
 		}
-		console.log("test-2", this.props);
 		const articlesData = articles && articles.articles;
 
 		return (
@@ -50,12 +47,11 @@ class Dashboard extends React.Component {
 				<PageHeader title={"Posts"} hideButton />
 				<div className="container-fluid noPadding">
 					<div className="dashboardDiv home-page">
-						<p>Hello...</p>
 						<ArticleList
 							pager={1}
 							articles={articlesData}
-							articlesCount={articlesCount}
-							currentPage={currentPage} />
+							articlesCount={articles.articlesCount}
+							currentPage={articles.currentPage} />
 					</div>
 				</div>
 			</div>
