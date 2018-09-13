@@ -21,8 +21,8 @@ module.exports = {
 				sentry_app: "''",
 				enableSentry: false,
 				enableTimeTravelDebugging: false,
-				enableReduxLogger: true,
-				API_URL: "'http://conduit.productionready.io/api'"
+				enableReduxLogger: false,
+				API_URL: "'https://reqres.in'"
 			}
 		}),
 		new webpack.optimize.UglifyJsPlugin({
