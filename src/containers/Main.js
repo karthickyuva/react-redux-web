@@ -9,6 +9,8 @@ import { Switch, Route, Link } from "react-router-dom";
 import Notifications from "react-notification-system-redux";
 import Navigation from "../components/Navigation";
 import Dashboard from "../containers/Dashboard";
+import Game from "../containers/Game";
+import Users from "../containers/Users";
 
 export class Main extends React.Component {
 	bodyClass(authenticated) {
@@ -40,6 +42,8 @@ export class Main extends React.Component {
 				<div className="container-fluid">
 					<Switch>
 						<Route exact path="/dashboard" component={Dashboard} />
+						<Route exact path="/game" component={Game} />
+						<Route exact path="/users" component={Users} />
 						{/*<Route exact path="/dashboard" component={requireAuth(Dashboard)} />*/}
 						<Route exact path="/login" component={requireGuest(Login)} />
 						<Route exact path="/logout" component={requireAuth(Logout)} />
