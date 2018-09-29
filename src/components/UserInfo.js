@@ -12,7 +12,7 @@ class UserInfo extends React.Component {
 						<Link className="author" to={`/users/${detail.id}`}>
 							{detail.first_name} {detail.last_name}
 						</Link>
-						<image src={detail.avatar} alt={detail.first_name} />
+						<img src={detail.avatar} alt={detail.first_name} />
 					</div>
 				</div>
 			</div>

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import User from "./UserInfo";
 
-class UsersList extends Component{
+class UsersList extends Component {
 
 	render() {
-		const {users, userInfo} = this.props;
+		const { users, userInfo } = this.props;
 
 		if (!users) {
 			return (
-				<div className="article-preview">Loading...</div>
+				<div className="article-preview">Loading...2</div>
 			);
 		}
 
@@ -20,24 +20,28 @@ class UsersList extends Component{
 			);
 		}
 
-		console.log("userInfo", userInfo);
 		if (!userInfo) {
-			return <div>Loading...</div>;
+			return <div>Loading...3</div>;
 		}
+
+		const renderUsers = [];
+
+		Object.keys(users).map((key) => {
+			const userDetail = userInfo[users[key]];
+
+			if (renderUsers) {
+				renderUsers.push(
+					<User key={key} detail={userDetail}/>
+				);
+			}
+		});
 
 		return (
 			<div>
-				{
-					userInfo.map(userDetail => {
-						return (
-							<User detail={userDetail}/>
-						);
-					})
-				}
-
+				{renderUsers}
 			</div>
 		);
-		}
+	}
 
 }
 

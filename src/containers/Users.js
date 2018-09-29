@@ -12,7 +12,7 @@ class Users extends React.Component {
 		super();
 		let page;
 		if (props.users) {
-			page = props.users.page;
+			page = props.users.pages;
 		}
 
 		this.state = {
@@ -37,17 +37,15 @@ class Users extends React.Component {
 	render() {
 		const { users, usersDetails } = this.props;
 
-		console.log("is fetching", users.isFetching);
-		console.log("userData", users);
-		console.log("usersDetail", usersDetails);
-
 		return (<div>
 			{ users.isFetching ?
-				<div>Loading...</div> :
+				<div>Loading...1</div> :
 				<div>
 					<div className="container-fluid noPadding">
 						<div className="dashboardDiv home-page">A
-							<UsersList users={users} userInfo={usersDetails} />
+							{ users.pages &&
+							<UsersList users={users.pages[1]} userInfo={usersDetails}/>
+							}
 						</div>
 					</div>
 				</div>
